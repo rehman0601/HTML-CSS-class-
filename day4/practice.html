@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+        }
+        ul.square {
+            list-style-type: square;
+        }
+        ul.circle {
+            list-style-type: circle;
+        }
+        ol.roman {
+            list-style-type: upper-roman;
+        }
+        ul.nested {
+            list-style-type: none;
+        }
+        ul.nested li {
+            margin-left: 20px;
+        }
+        ul.horizontal {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        ul.tags li {
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ul">
+           <ul class="circle">
+            <li>Sarthak Kanade</li> 
+            <li>Rehman Khan</li> 
+            <li>Rizwan Salmani</li> 
+            <li>Manthan Bhosale</li>
+            <li>Atharva</li>
+            <li>Ameya Sagvekar</li>
+            <li>Samarth</li>
+            <li>Ankit Verma</li>
+            <li>Shivam</li>
+            <li>Harsh</li>
+           </ul>
+        </div>
+
+        <div class="ol">
+           <ol class="roman" start="4" reversed>
+            <li>125</li>
+            <li>114</li>
+            <li>136</li>
+            <li>097</li>
+            <li>096</li>
+            <li>113</li>
+            <li>112</li>
+            <li>126</li>
+            <li>143</li>
+            <li>102</li>
+           </ol>
+        </div>
+    </div>
+
+    <ul class="nested">
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Mango
+                    <ul>
+                        <li>Alphonso</li>
+                        <li>Kesar</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Vegetables</li>
+    </ul>
+
+    <ul class="horizontal">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    
+    <ul class="tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+</html>

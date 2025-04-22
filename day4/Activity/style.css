@@ -1,0 +1,91 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    
+}
+header
+{   
+    padding: 20px;
+    font-size: 24px;
+    color: #36618d;
+    margin: 0 auto;
+}
+header img {
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+    box-shadow: 10px 10px 2px #888888;
+    border-radius: 10px;
+}
+body p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #36618d;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.yt{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+}
+.container
+{
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+header h1
+{
+    margin: 0;
+    text-align: center;
+
+}
+header ul
+{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+    padding: 15px;
+    
+}
+h1,h2,h3
+{
+    padding: 10px;
+    color: #36618d;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+body p{
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+}
+.container table{
+    width: 800px;
+    border-radius: 5px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 2px #888888;
+}
+.container table th{
+    background-color: #36618d;
+    color: #ffffff;
+    width: 450px;
+}
+.container table td{
+    padding: 10px;
+    width: 200px;
+}
