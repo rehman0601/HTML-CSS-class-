@@ -1,0 +1,18 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 10px;
+    padding-left: 500px;
+    padding-right: 500px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.container{
+    border: 2px solid gray;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
