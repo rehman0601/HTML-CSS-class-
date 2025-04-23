@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .button {
+            display: inline-block;
+            background: orange;
+            padding: 10px 20px;
+            color:white;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: darkorange;
+        }
+        .Responsive_box {
+            background-color: lightblue;
+            padding: 20px;
+            margin: auto;
+            width: 100%;
+            max-width: 300px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body style="background-image:url(https://imgs.search.brave.com/11hKDn1qB0Jpyh_uuBfqlgi9izEpm2IakjrYVVfsipY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/MTM0MDg1My9waG90/by92YXJpb3VzLWRv/Zy1oZWFkcy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VUh6/d0NsWU96OUE4QVg0/MjBiUlQ1MXRGM3o5/Qmp1VEQxTmk4LXBr/U1BOYz0);">
+    <div style="background-color: lightblue; padding: 20px;">
+        hello i am a box
+    </div>
+    <h2>2nd question</h2>
+    <div style="display: flex;margin: 10px;">
+        <div style="background-color:lightblue; width: 40%; padding: 10px; margin: 10px;"></div>
+        <div style="background-color:lightgreen; width:60%; padding: 10px; margin: 10px;"></div>
+    </div>
+    <div style="width: 500px; background-color: aliceblue; padding: 10px; margin: 0 auto; text-align: center;">
+        <h2>3rd question</h2>
+        <p>hello i am a centered</p>
+    </div>
+    <div style="background: navy;color: aliceblue; padding: 10px; text-align: center;margin:10px;box-shadow: 5px 5px 10px #111;">Header</div>
+    <div style="background: lightblue; padding: 10px; margin: 10px;">Main</div>
+    <div style="background: navy;color: aliceblue; padding: 10px;text-align: center;margin: 10px;box-shadow: 5px 5px 10px #111;">Footer</div>
+    <div class="button">click me</div>
+    <div class="Responsive_box">  This box adjusts its size!    </div>
+    <div class="flex1" style="display: flex;">
+        <div style="background-color: lightblue; padding: 20px; margin: 10px; width: 30%; float: left;">Box 1</div>
+        <div style="background-color: lightgreen; padding: 20px; margin: 10px; width: 30%; float: left;">Box 2</div>
+        <div style="background-color: lightcoral; padding: 20px; margin: 10px; width: 30%; float: left;">Box 3</div>
+    </div>
+    <div style="border: 4px solid black; padding: 10px; box-shadow:5px 5px 10px #111; text-align: center;">
+        This is a stylish box with a border and shadow.
+    </div>
+    <div style=" background: white; margin-top:10px;border:  2px solid gray; padding: 15px; width: 250px; margin: 0 auto;">
+        <h3>Dog</h3>
+        <img src="https://imgs.search.brave.com/t9Y9DIJz1_lXclKvjlRYLRiCzIJZJS0QO_GSmJGGEWY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEzLzMwLzg0LzI2/LzM2MF9GXzEzMzA4/NDI2ODRfbVI1dzVX/c3V5ckFldFZVN0t3/WjhPcExBOWl1Zmhk/aEcuanBn" alt="Dog-image" width="100%">
+        <button style="border-radius: 5px; padding: 5px; margin: 2px; background-color: aliceblue;">Visit</button>
+    </div>
+        <div style="padding: 10px; background: linear-gradient(to left,#111,#888);"></div>
+    </div>
+    <div style="width: 200px; height: 100px;margin:20px; text-align: center; background: skyblue; transition: 0.3s;" onmouseover="this.style.transform='scale(1.2)';this.style.background='#111';this.style.color='white';" onmouseout="this.style.transform='scale(1)';this.style.background='skyblue';">
+  Hover over me!
+</div>
+<div style="background: #ffff88; padding: 20px; width: 200px; font-family: cursive; box-shadow: 5px 5px 10px #ccc; transform: rotate(-5deg);">
+    Don’t forget to code today!
+</div>
+  <div style="margin:10px;background: rgba(218, 189, 189, 0.451); backdrop-filter: blur(4px); padding: 20px; border-radius: 10px; color: black; border: 1px solid rgba(255, 255, 255, 0.3); width: 300px;">
+    Glass-like div effect!
+  </div>
+  <div onclick="document.getElementById('hidden').style.display='block'" style="cursor: pointer; background: coral; padding: 10px; color: white;">
+    Click to show more...
+  </div>
+  <div id="hidden" style="display: none; padding: 10px; background: lightcoral;">
+    🎉 Surprise! Here's some hidden content.
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px;">
+    <div style="background: lavender; padding: 20px;">1</div>
+    <div style="background: lavender; padding: 20px;">2</div>
+    <div style="background: lavender; padding: 20px;">3</div>
+    <div style="background: lavender; padding: 20px;">4</div>
+  </div>
+  <div style="display: flex;">
+    <div style="width: 50px; height: 50px; background: #d3ff6b;"></div>
+    <div style="width: 50px; height: 50px; background: #57c9fe;"></div>
+    <div style="width: 50px; height: 50px; background: #d11db6;"></div>
+    <div style="width: 50px; height: 50px; background: #54a0ff;"></div>
+  </div>
+  <div style="display: inline-block; background: crimson; color: white; padding: 5px 10px; border-radius: 50px;">
+    New!
+  </div>
+  <div style="max-width: 300px; padding: 15px; background: #fff3cd; border: 1px solid #ffeeba; border-radius: 10px;">
+    <strong>⚠️ Alert:</strong> You have 2 unread messages.
+  </div>
+  <div style="margin:20px;max-width: 300px; padding: 15px; background: #dc7d4e; border: 1px solid #ed8f8f; border-radius: 10px;">
+    <strong>Error:</strong> System not responding.
+  </div>
+  <div style="max-width: 250px; background: #e0f7fa; padding: 10px 15px; border-radius: 20px; margin: 10px 0;">
+    Hello! This is a chat message.
+  </div>
+  <div style="max-width: 250px; background: #e0f7fa; padding: 10px 15px; border-radius: 20px; margin: 10px 0;text-align: right;">
+    ok
+  </div>
+  
+  
+  
+
+</body>
+</html>
