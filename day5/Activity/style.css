@@ -9,6 +9,23 @@ ul{
     list-style-type: none;
     padding: 0;
 }
+.ATitle{
+    background: #36618d;
+}
+.head{
+    background: #36618d;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: #36618d;
+}
 .container{
     border: 2px solid gray;
     margin: 20px auto;
