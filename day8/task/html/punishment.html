@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        
+        body{
+            font-family: Arial, sans-serif;
+        }
+        form{
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="text"],input[type="password"],input[type="email"],input[type="file"],input[type="tel"]{
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 95%;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+            padding: 10px;
+
+        }
+        select{
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        fieldset{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        label{
+            font-size: large;
+            margin: 5px 0;
+        }
+        textarea{
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 95%;
+        }
+        button{
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #47944bb6;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit">
+        <div id="info">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Poonam K" required><br>
+        <label for="Email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br>
+        </div>
+        <fieldset id="Gender">
+            <legend>Gender:</legend>
+            <input type="radio" id="male" name="male" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="female" value="femlae">
+            <label for="male">Female</label><br>
+            <input type="radio" id="other" name="other" value="other">
+            <label for="male">Other</label><br>
+        </fieldset>
+            <div id="city">
+            <label for="city">City:</label> <br>
+            <select id="city" name="city">
+                <option value="nyc">Mumbai</option>
+                <option value="la">Hyderabad</option>
+                <option value="sf">Delhi</option>
+            </select>
+            </div>
+                <label style="margin: 10px;" for="subscribe">Subscribe to newsletter:</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+            <div id="file-upload">
+            <label for="file">Upload resume:</label><br>
+            <input type="file" id="file" name="resume">
+            </div>
+            <div id="message">
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..."></textarea>
+            </div>
+            <div id="submit">
+            <button type="submit">Submit</button>
+            </div>
+
+    </form>
+    
+</body>
+</html>
