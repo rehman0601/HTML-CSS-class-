@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mobile-friendly navigation bar</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <style>
+        /* Desktop version */
+    nav {
+    display: flex;
+    justify-content: space-around;
+        background-color: #e49797;
+    }
+
+    nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    }
+
+    /* Mobile version */
+    @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    }
+    </style>
+    <div class="container">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is the content for column 1.</p>
+        </div>
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is the content for column 2.</p>
+        </div>
+    </div>
+
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .column {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <div class="text-demo"></div>
+        <h1>Responsive Text</h1>
+        <p>This text will resize based on screen width.</p>
+    </div>
+
+    <style>
+        .text-demo {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .text-demo h1 {
+            font-size: 32px;
+        }
+
+        .text-demo p {
+            font-size: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .text-demo h1 {
+                font-size: 26px;
+            }
+            
+            .text-demo p {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <div class="layout">
+        <div class="sidebar">Sidebar Content</div>
+        <div class="main-content">Main Content</div>
+    </div>
+
+    <style>
+        /* Sidebar is visible on larger screens */
+        .sidebar {
+        width: 300px;
+        float: left;
+        }
+
+        .main-content {
+        margin-left: 320px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+        .sidebar {
+            display: none;
+        }
+
+        .main-content {
+            margin-left: 0;
+        }
+        }
+    </style>
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+    <style>
+        /* Desktop version */
+        .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        }
+
+        .card {
+        padding: 20px;
+        background-color: #e4e4e4;
+        text-align: center;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+        .card-container {
+            grid-template-columns: 1fr;
+        }
+        }
+    </style>
+    <style>
+        body {
+            background-color: #ffffff;
+            transition: background-color 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-color: #e0e0e0;
+            }
+        }
+    </style>
+    <div class="flex-container"></div>
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            padding: 20px;
+            background-color: #e7f4c7;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <div class="text-weight">
+        <h1>Responsive Font Weight</h1>
+        <h2>Subtitle Example</h2>
+        <p>Regular text content</p>
+    </div>
+
+    <style>
+        .text-weight h1 {
+            font-weight: 400;
+        }
+
+        .text-weight h2 {
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .text-weight h1 {
+                font-weight: 600;
+            }
+
+            .text-weight h2 {
+                font-weight: 500;
+            }
+        }
+    </style>
+    <div class="button-container">
+        <button class="touch-button">Click Me</button>
+    </div>
+
+    <style>
+        .button-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .touch-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .touch-button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .touch-button {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+    <div class="image-container">
+        <img style="height: 400px; width: auto;" src="https://img.freepik.com/free-photo/close-up-adorable-kitten-nature_23-2150782221.jpg?semt=ais_hybrid&w=740" alt="Sample image">
+    </div>
+
+    <style>
+        .image-container {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                margin: 10px auto;
+            }
+        }
+    </style>
+    <h1>Responsive Font Size</h1>
+    <style>
+        /* Default styles */
+        h1 {
+        font-size: 24px;
+        }
+
+        /* Tablet screens */
+        @media (max-width: 1024px) {
+        h1 {
+            font-size: 20px;
+        }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 768px) {
+        h1 {
+            font-size: 18px;
+        }
+        }
+
+    </style>
+</body>
+</html>
