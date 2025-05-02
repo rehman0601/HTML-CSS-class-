@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+</head>
+<body style="margin: 10px;">
+    <h1>🎯 CSS Animation, Pseudo-classes & Pseudo-elements Practice Set</h1>
+    <h2> Task 1: Basic Color Animation</h2>
+    <div class="box"></div>
+    <style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    .box:hover{
+        animation: colorChange 2s;
+    }
+    @keyframes colorChange {
+        from { background-color: red; }
+        to { background-color: yellow; }
+    }
+    </style>
+    <h2> Task 2: Multi-step Animation</h2>
+    <div class="multi"></div>
+    <style>
+      .multi {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+      }
+      .multi:hover{
+        animation: moveColor 5s forwards;
+      }
+    
+      @keyframes moveColor {
+        0%   { left: 0; background: red; }
+        25%  { left: 50px; background: orange; }
+        50%  { left: 100px; background: yellow; }
+        100% { left: 200px; background: green; }
+      }
+    </style>
+    <h2> Task 3: Infinite Loop Animation</h2>
+    <div class="pulse"></div>
+    <style>
+        .pulse{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse{
+            from {transform: scale(1);}
+            to {transform: scale(1.2);}
+
+        }
+    </style>
+    <h2> Task 4: Hover Effect</h2>
+    <button class="btn-hv">Hover</button>
+    <style>
+        .btn-hv{
+            background-color: cornsilk;
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+            border: 0cap;
+        }
+        .btn-hv:hover{
+            background-color: antiquewhite;
+        }
+    </style>
+    <h2> Task 5: Focus State Styling</h2>
+    <input class="F-input" type="text" placeholder="Focus">
+    <style>
+        .F-input{
+            width: 200px;
+            padding: 20px;
+        }
+        input:focus{
+            border: 2px solid royalblue;
+            outline: none;
+        }
+    </style>
+    <h2> Task 6: First-child Styling</h2>
+    <ul>
+        <li>First item</li>
+        <li>second item</li>
+    </ul>
+    <style>
+        li:first-child{
+            color: rgb(194, 119, 7);
+        }
+    </style>
+    <h2>Task 7: Add Decorative Content</h2>
+    <h2>Introduction</h2>
+    <style>
+        h2::before{
+            content: "🔹 ";
+        }
+    </style>
+    <h2>Task 8: First-letter Styling</h2>
+    <p>Learning CSS is fun and powerful</p>
+    <style>
+        p::first-letter{
+            color: rgb(221, 138, 36);
+            font-size: 200%
+        }
+    </style>
+    <h2>Task 9: Custom List Markers</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    <style>
+        li::marker{
+            content: "➤ ";
+            color: orange;
+        }
+    </style>
+    <h2> Task 10: Animated Button with Shine Effect</h2>
+    <button class="shiny">Shiny button</button>
+    <style>
+        .shiny{
+            position: relative;
+            padding: 12px 30px;
+            background: rgb(221, 138, 36);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            font-size: 16px;
+        }
+        .shiny::after{
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: skewX(-20deg);
+        }
+        .shiny:hover::after{
+            animation: slide-shine 1s linear forwards;
+        }
+        @keyframes slide-shine{
+            to {left: 150%;}
+        }
+    </style>
+</body>
+</html>
