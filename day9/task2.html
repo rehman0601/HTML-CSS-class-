@@ -3,22 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Animation Properties Practice Tasks</title>
-</head>
-<body>
-    <h2>Task 1: Use animation-name & animation-duration</h2>
-    <div class="square"></div>
+    <title>CSS Animation Tasks</title>
     <style>
-        .square{
-            background-color: aquamarine;
-            height: 100px;
-            width: 100px;
-            animation: slide 2s;
+  
+        .box {
+            width: 50px;
+            height: 50px;
+            margin: 20px;
         }
-        @keyframes slide{
-            from {left: 0px;}
-            to {left: 100px;}
+
+        @keyframes slideRight {
+            to { transform: translateX(100px); }
+        }
+        .slide-right {
+            background: red;
+            animation-name: slideRight;
+            animation-duration: 2s;
+        }
+
+        @keyframes colorChange {
+            to { background: purple; }
+        }
+        .circle {
+            background: blue;
+            border-radius: 50%;
+            animation: colorChange 2s;
+            animation-delay: 2s;
+        }
+
+        @keyframes bounce {
+            50% { transform: translateY(-30px); }
+        }
+        .bouncing-box {
+            background: green;
+            animation: bounce 1s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes yoyo {
+            to { transform: translateX(200px); }
+        }
+        .yoyo-box {
+            background: orange;
+            animation: yoyo 2s alternate infinite;
+        }
+
+
+        @keyframes move {
+            to { transform: translateX(200px); }
+        }
+        .timing-linear { animation: move 3s linear infinite; background: pink; }
+        .timing-ease-in { animation: move 3s ease-in infinite; background: purple; }
+        .timing-ease-out { animation: move 3s ease-out infinite; background: blue; }
+        .timing-ease-in-out { animation: move 3s ease-in-out infinite; background: green; }
+
+        @keyframes grow {
+            to { transform: scale(1.5); }
+        }
+        .growing-box {
+            background: yellow;
+            animation: grow 2s forwards;
+        }
+
+        @keyframes appear {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .backward-box {
+            background: cyan;
+            animation: appear 2s 1s backwards;
+        }
+
+        .play-pause-box {
+            background: magenta;
+            animation: slideRight 2s infinite;
+        }
+
+        @keyframes loading {
+            0% { transform: scale(0.3); background: red; }
+            50% { transform: scale(1); background: blue; }
+            100% { transform: scale(0.3); background: red; }
+        }
+        .loading {
+            animation: loading 2s ease-in-out infinite alternate;
+        }
+
+        .hover-box {
+            background: gray;
+            position: relative;
+            overflow: hidden;
+        }
+        .hover-box::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.5);
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+        .hover-box:hover::after {
+            transform: translateX(0);
         }
     </style>
+</head>
+<body>
+    <h2>🔹 Task 1: Use animation-name & animation-duration</h2>
+    <div class="box slide-right"></div>
+    <h2>🔹 Task 2: Apply animation-delay</h2>
+    <div class="box circle"></div>
+    <h2>🔹 Task 3: Experiment with animation-iteration-count</h2>
+    <div class="box bouncing-box"></div>
+    <h2>🔹 Task 4: Use animation-direction</h2>
+    <div class="box yoyo-box"></div>
+    <h2>🔹 Task 5: Compare animation-timing-function Options</h2>
+    <div class="box timing-linear">Linear</div>
+    <div class="box timing-ease-in">Ease-in</div>
+    <div class="box timing-ease-out">Ease-out</div>
+    <div class="box timing-ease-in-out">Ease-in-out</div>
+
+    <h2>🔹 Task 6: Try animation-fill-mode</h2>
+    <div class="box growing-box"></div>
+
+    <h2>🔹 Task 7: Use animation-fill-mode: backwards</h2>
+    <div class="box backward-box"></div>
+    <h2>🔹 Task 8: Toggle animation-play-state</h2>
+    <div class="box play-pause-box" id="box">Task 8</div>
+    <button onclick="toggleAnimation()">Toggle Animation</button>
+    <h2>🔹 Task 9: Combine All Animation Properties</h2>
+    <div class="box loading">Task 9</div>
+    <h2>🔹 Task 10: Bonus – Hover-triggered Animation</h2>
+    <div class="box hover-box">Task 10</div>
+
+    <script>
+        function toggleAnimation() {
+            const box = document.getElementById("box");
+            const currentState = box.style.animationPlayState || 'running';
+            box.style.animationPlayState = currentState === 'running' ? 'paused' : 'running';
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mood Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,2);
+        }
+        .card:hover{
+            transform: scale(1.1);
+            transition: 1.2s;
+        }
+
+        .happy {
+            border-left: 5px solid #ede92d;
+        }
+
+        .meh {
+            border-left: 5px solid #000000;
+        }
+
+        .sad {
+            border-left: 5px solid #3685f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .card:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+
+        .card:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .like-btn {
+            border: none;
+            background: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .good:hover::before {
+            content: "🥳 ";
+        }
+
+        .meh1:hover::before {
+            content: "🙂 ";
+        }
+
+        .sad1:hover::before {
+            content: "😌 ";
+        }
+        .good::before {
+            content: "😊 ";
+        }
+
+        .meh1::before {
+            content: "😐 ";
+        }
+
+        .sad1::before {
+            content: "😢 ";
+        }
+        .card p::first-letter{
+            font-size: 200%;
+            color: rgb(255, 149, 0);
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .like-btn:active {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Mood Journal</h1>
+        
+        <div class="card happy">
+            <h2 class="good">Wonderful Day!</h2>
+            <p>Today was absolutely amazing! I accomplished all my tasks and had a great time with friends.</p>
+            <button class="like-btn">❤️</button>
+        </div>
+
+        <div class="card meh">
+            <h2 class="meh1">Just Another Day</h2>
+            <p>Nothing special happened today. It was a regular day with the usual routine.</p>
+            <button class="like-btn">❤️</button>
+        </div>
+
+        <div class="card sad">
+            <h2 class="sad1">Feeling Down</h2>
+            <p>Things didn't go as planned today. Hoping tomorrow will be better.</p>
+            <button class="like-btn">❤️</button>
+        </div>
+
+        <div class="card happy">
+            <h2 class="good">Achievement Unlocked!</h2>
+            <p>Finally completed my project! The results were better than expected.</p>
+            <button class="like-btn">❤️</button>
+        </div>
+    </div>
+</body>
+</html></div>

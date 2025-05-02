@@ -4,8 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .section {
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            margin: 10px auto;
+        }
+
+        @keyframes move {
+            from { transform: translateX(0); }
+            to { transform: translateX(100px); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes play-state{
+
+        }
+
+        .duration { animation: move 2s infinite; }
+        .delay { animation: move 2s infinite 1s; }
+        .iteration { animation: move 2s 3; }
+        .direction { animation: move 2s infinite alternate; }
+        .timing { animation: move 2s infinite ease-in-out; }
+        .fill-mode { animation: move 2s forwards; }
+        .play-state:hover { animation: rotate 2s infinite;animation-play-state: paused; }
+        .custom { animation: rotate 2s infinite; }
+
+        .controls {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="section">
+            <h3>Duration</h3>
+            <div class="box duration"></div>
+            <p>2s duration</p>
+        </div>
+
+        <div class="section">
+            <h3>Delay</h3>
+            <div class="box delay"></div>
+            <p>1s delay</p>
+        </div>
+
+        <div class="section">
+            <h3>Iteration Count</h3>
+            <div class="box iteration"></div>
+            <p>3 iterations</p>
+        </div>
+
+        <div class="section">
+            <h3>Direction</h3>
+            <div class="box direction"></div>
+            <p>Alternate direction</p>
+        </div>
+
+        <div class="section">
+            <h3>Timing Function</h3>
+            <div class="box timing"></div>
+            <p>Ease-in-out</p>
+        </div>
+
+        <div class="section">
+            <h3>Fill Mode</h3>
+            <div class="box fill-mode"></div>
+            <p>Forwards</p>
+        </div>
+
+        <div class="section">
+            <h3>Play State</h3>
+            <div class="box play-state"></div>
+            <p>Hover to pause</p>
+        </div>
+
+        <div class="section">
+            <h3>Custom</h3>
+            <div class="box custom"></div>
+            <p>Rotation</p>
+        </div>
+    </div></div>
 </body>
 </html>
