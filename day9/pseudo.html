@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Task 4: Hover Effect</h2>
+    <button class="btn-hv">Hover</button>
+    <style>
+        .btn-hv{
+            background-color: cornsilk;
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+            border: 0cap;
+        }
+        .btn-hv:hover{
+            background-color: antiquewhite;
+        }
+    </style>
+    <h2> Task 5: Focus State Styling</h2>
+    <input class="F-input" type="text" placeholder="Focus">
+    <style>
+        .F-input{
+            width: 200px;
+            padding: 20px;
+        }
+        input:focus{
+            border: 2px solid royalblue;
+            outline: none;
+        }
+    </style>
+    <h2> Task 6: First-child Styling</h2>
+    <ul>
+        <li>First item</li>
+        <li>second item</li>
+    </ul>
+    <style>
+        li:first-child{
+            color: rgb(194, 119, 7);
+        }
+    </style>
+    <h2>Task 7: Add Decorative Content</h2>
+    <h3>Introduction</h3>
+    <style>
+        h3::before{
+            content: "🔹 ";
+        }
+    </style>
+    <h2>Task 8: First-letter Styling</h2>
+    <p>Learning CSS is fun and powerful</p>
+    <style>
+        p::first-letter{
+            color: rgb(221, 138, 36);
+            font-size: 200%
+        }
+    </style>
+    <h2>Task 9: Custom List Markers</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    <style>
+        li::marker{
+            content: "➤ ";
+            color: orange;
+        }
+    </style>
+    <h2> Task 10: Animated Button with Shine Effect</h2>
+    <button class="shiny">Shiny button</button>
+    <style>
+        .shiny{
+            position: relative;
+            padding: 12px 30px;
+            background: rgb(221, 138, 36);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            font-size: 16px;
+        }
+        .shiny::after{
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: skewX(-20deg);
+        }
+        .shiny:hover::after{
+            animation: slide-shine 1s linear forwards;
+        }
+        @keyframes slide-shine{
+            to {left: 150%;}
+        }
+    </style>
+</body>
+</html>
